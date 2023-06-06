@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  DeliciousDesserts
+
+  Created by David Ruvinskiy on 6/5/23.
+  
+*/
+
+"invalidURL" = "There was an issue connecting to the server. Please contact support.";
+"invalidResponse" = "Invalid response from the server. Please try again.";
+"invalidData" = "The data received from the server was invalid. Please try again.";
+"defaultError" = "There was an issue connecting to the server. If this persists, please contact support.";
+
+"desserts-view.navigation-item.title" = "Desserts";
+"header-view.ingredients-section.name" = "Ingredients";
+"header-view.instructions-section.name" = "Ingredients";
