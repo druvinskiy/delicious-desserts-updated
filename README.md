@@ -3,8 +3,8 @@
 Take home project for Fetch using theMealDB API: https://www.themealdb.com/api.php.
 
 <p align="middle">
-  <img src="https://github.com/druvinskiy/delicious-desserts-updated/assets/19519587/11d33752-c44f-4057-a0fd-f8fbbd080b2f" width="45%" />
-  <img src="https://github.com/druvinskiy/delicious-desserts-updated/assets/19519587/1c7a06bf-5abd-453f-aa9d-f8e03d60685a" width="45%" />
+  <img src="https://github.com/druvinskiy/delicious-desserts-updated/assets/19519587/2ba6aaaf-cfb5-4a0d-9746-4ff5b9eddb3d" width="45%" />
+  <img src="https://github.com/druvinskiy/delicious-desserts-updated/assets/19519587/1c430bec-164c-4687-bc84-036f769cc980" width="45%" />
 </p>
 Scroll through each dessert and tap on one to learn how to bake it.
 
