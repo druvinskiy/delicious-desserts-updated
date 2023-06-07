@@ -23,8 +23,10 @@ class HeaderView: UIView {
         addSubview(nameLabel)
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         
+        let nameLabelLeadingPadding: CGFloat = 12
+        
         NSLayoutConstraint.activate([
-            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
+            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: nameLabelLeadingPadding),
             nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }

@@ -66,7 +66,7 @@ struct WebDessert: Decodable {
     }
 }
 
-/// Converts a `WebDessert` to a `Dessert`. If the passed `WebDessert` contains a nil `name` or `id`, the `WebDessert` is considered invalid, and a `Dessert` is not created.
+/// Data Transfer Object used to represent a `WebDessert`. If the passed `WebDessert` contains a nil `name` or `id`, the `WebDessert` is considered invalid, and a `Dessert` is not created.
 struct Dessert: Comparable {
     let name: String
     let thumbnailUrl: String?

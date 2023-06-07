@@ -8,7 +8,8 @@
 import UIKit
 
 class NetworkManager {
-    private var urlSession: URLSession
+    private let urlSession: URLSession
+    private let decoder = JSONDecoder()
     
     init(urlSession: URLSession = URLSession.shared) {
         self.urlSession = urlSession
@@ -42,7 +43,6 @@ class NetworkManager {
         }
         
         do {
-            let decoder = JSONDecoder()
             return try decoder.decode(T.self, from: data)
         } catch {
             throw DDError.invalidData

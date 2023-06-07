@@ -68,7 +68,10 @@ class DessertsViewController: UICollectionViewController {
         let endpoint = Endpoint.details(id: dessert.id).url
         networkingViewsManager.showLoadingView()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        /// Small delay to prevent a UI flash when dismissing the loading view and pushing the new view controller
+        let delay = 0.2
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             Task {
                 var viewControllerToPush: UIViewController
                 
@@ -96,7 +99,10 @@ class DessertsViewController: UICollectionViewController {
             self.collectionView.reloadData()
         }
     }
-    
+}
+
+// MARK: - Collection view methods
+extension DessertsViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return desserts.count
     }

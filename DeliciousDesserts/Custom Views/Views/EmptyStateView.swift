@@ -37,11 +37,16 @@ class EmptyStateView: UIView {
         messageLabel.numberOfLines = 0
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
         
+        let centerYAnchorConstant: CGFloat = -150
+        let leadingAnchorConstant: CGFloat = 40
+        let trailingPadding: CGFloat = -40
+        let heightAnchorConstant: CGFloat = 200
+        
         NSLayoutConstraint.activate([
-            messageLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -150),
-            messageLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 40),
-            messageLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
-            messageLabel.heightAnchor.constraint(equalToConstant: 200)
+            messageLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: centerYAnchorConstant),
+            messageLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: leadingAnchorConstant),
+            messageLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: trailingPadding),
+            messageLabel.heightAnchor.constraint(equalToConstant: heightAnchorConstant)
         ])
     }
     
@@ -50,11 +55,15 @@ class EmptyStateView: UIView {
         logoImageView.alpha = 0.3
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
         
+        let widthAndHeightAnchorMultiplier: CGFloat = 1.3
+        let trailingPadding: CGFloat = 170
+        let bottomPadding: CGFloat = 40
+        
         NSLayoutConstraint.activate([
-            logoImageView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.3),
-            logoImageView.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.3),
-            logoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 170),
-            logoImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 40)
+            logoImageView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: widthAndHeightAnchorMultiplier),
+            logoImageView.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: widthAndHeightAnchorMultiplier),
+            logoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: trailingPadding),
+            logoImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: bottomPadding)
         ])
     }
 }

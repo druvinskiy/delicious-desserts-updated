@@ -38,11 +38,11 @@ class DessertDetailViewController: UITableViewController {
         func cell(for tableView: UITableView, at indexPath: IndexPath, with dessertDetail: DessertDetail) -> UITableViewCell {
             switch self {
             case .ingredients:
-                let cell = tableView.dequeueReusableCell(withIdentifier: IngredientCell.reuseID) as! IngredientCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: IngredientCell.reuseID, for: indexPath) as! IngredientCell
                 cell.set(ingredient: dessertDetail.ingredients[indexPath.row])
                 return cell
             case .instructions:
-                let cell = tableView.dequeueReusableCell(withIdentifier: InstructionsCell.reuseID) as! InstructionsCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: InstructionsCell.reuseID, for: indexPath) as! InstructionsCell
                 cell.set(details: dessertDetail)
                 return cell
             }
@@ -87,6 +87,7 @@ class DessertDetailViewController: UITableViewController {
     }
 }
 
+// MARK: - Table view methods
 extension DessertDetailViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let section = Section(rawValue: section)!

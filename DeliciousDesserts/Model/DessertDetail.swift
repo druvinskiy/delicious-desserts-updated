@@ -88,10 +88,10 @@ struct DessertDetail: Decodable {
                 throw DDError.invalidData
             }
             
-            let cleanIngredientName = value.lowercased().trimmingCharacters(in: .whitespaces)
-            let cleanIngredientMeasure = ingredientMeasure.trimmingCharacters(in: .whitespaces)
+            let normalizedIngredientName = value.lowercased().trimmingCharacters(in: .whitespaces)
+            let normalizedIngredientMeasure = ingredientMeasure.trimmingCharacters(in: .whitespaces)
             
-            let ingredient = Ingredient(name: cleanIngredientName, measurement: cleanIngredientMeasure)
+            let ingredient = Ingredient(name: normalizedIngredientName, measurement: normalizedIngredientMeasure)
             ingredients.append(ingredient)
         }
         

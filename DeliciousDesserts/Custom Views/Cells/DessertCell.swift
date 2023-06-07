@@ -40,13 +40,16 @@ class DessertCell: UICollectionViewCell {
         
         dessertImageView.pinToEdges(of: self)
         
+        let nameViewHeightMultiplier: CGFloat = 0.1
+        let nameLabelPadding: CGFloat = 12
+        
         NSLayoutConstraint.activate([
-            nameView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
-            nameView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
+            nameView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            nameView.bottomAnchor.constraint(equalTo: bottomAnchor),
             nameView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            nameView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1),
+            nameView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: nameViewHeightMultiplier),
             
-            nameLabel.leadingAnchor.constraint(equalTo: nameView.leadingAnchor, constant: 12),
+            nameLabel.leadingAnchor.constraint(equalTo: nameView.leadingAnchor, constant: nameLabelPadding),
             nameLabel.centerYAnchor.constraint(equalTo: nameView.centerYAnchor)
         ])
     }
