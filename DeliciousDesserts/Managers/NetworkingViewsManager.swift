@@ -50,9 +50,11 @@ class NetworkingViewsManager {
         }
     }
     
-    func showEmptyStateView(with message: String, in view: UIView) {
+    func showEmptyStateView(with message: String) {
+        guard let parentView = parentViewController?.view else { return }
+        
         let emptyStateView = EmptyStateView(message: message)
-        emptyStateView.frame = view.bounds
-        view.addSubview(emptyStateView)
+        emptyStateView.frame = parentView.frame
+        parentView.addSubview(emptyStateView)
     }
 }

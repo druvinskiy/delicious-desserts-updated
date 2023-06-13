@@ -12,18 +12,15 @@ class EmptyStateView: UIView {
     let messageLabel = DDTitleLabel(textAlignment: .center, fontSize: 24, textColor: .secondaryLabel)
     let logoImageView = UIImageView()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(message: String) {
+        messageLabel.text = message
+        
+        super.init(frame: .zero)
         configure()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    convenience init(message: String) {
-        self.init(frame: .zero)
-        messageLabel.text = message
     }
     
     private func configure() {

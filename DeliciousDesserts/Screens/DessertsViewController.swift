@@ -59,7 +59,7 @@ class DessertsViewController: UICollectionViewController {
                     errorString = ddError.description
                 }
                 
-                networkingViewsManager.showEmptyStateView(with: errorString, in: self.view)
+                networkingViewsManager.showEmptyStateView(with: errorString)
             }
         }
     }
